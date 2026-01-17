@@ -31,13 +31,13 @@ jobs:
       run: ./gradlew android:assembleDebug
       
     - name: Upload Desktop JAR
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: ShatteredPD-Studio-Desktop
         path: desktop/build/libs/*.jar
         
     - name: Upload Android APK
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: ShatteredPD-Studio-Android
         path: android/build/outputs/apk/debug/*.apk
