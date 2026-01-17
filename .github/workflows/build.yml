@@ -25,7 +25,7 @@ jobs:
       run: chmod +x gradlew
       
     - name: Build Desktop JAR
-      run: ./gradlew desktop:dist
+      run: ./gradlew desktop:distZip
       
     - name: Build Android APK
       run: ./gradlew android:assembleDebug
