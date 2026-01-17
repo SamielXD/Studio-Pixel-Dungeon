@@ -21,6 +21,7 @@
 
 package com.shatteredpixel.shatteredpixeldungeon;
 
+import com.shatteredpixel.shatteredpixeldungeon.studio.StudioMod;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.GameScene;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.PixelScene;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.TitleScene;
@@ -55,11 +56,13 @@ public class ShatteredPixelDungeon extends Game {
 	}
 	
 	@Override
-	public void create() {
-		super.create();
+public void create() {
+    super.create();
 
-		updateSystemUI();
-		SPDAction.loadBindings();
+    updateSystemUI();
+    SPDAction.loadBindings();
+    
+    StudioMod.init();
 		
 		Music.INSTANCE.enable( SPDSettings.music() );
 		Music.INSTANCE.volume( SPDSettings.musicVol()*SPDSettings.musicVol()/100f );
